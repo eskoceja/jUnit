@@ -10,8 +10,18 @@ public class HiFriendTest {
     @DisplayName("Test hiFriend() method")
     @Test
     public void testHiFriend() {
-        assertEquals("Hi Bubbles Bubblegum!", HiFriend.hiFriend("Bubbles Bubblegum"));
+        HiFriend friend = new HiFriend();
+        String name = "Bubbles Bubblegum";
+        assertEquals("Hi Bubbles Bubblegum!", friend.hiFriend(name));
 
+    }
+
+    @DisplayName("Making hiFriend() run an error")
+    @Test
+    public void testHiFriendForFail() {
+        HiFriend friend = new HiFriend();
+        String name = "Bubbles Bubblegum";
+        assertNotEquals(name, friend.hiFriend(name));
     }
 
 }
